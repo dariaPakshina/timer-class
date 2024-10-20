@@ -29,7 +29,6 @@ export class EditScheduleComponent implements OnInit {
   ngAfterViewInit(): void {}
 
   onEdit(): void {
-    this.timerService.playAudio();
     if (this.editingScreen) {
       const element = this.editingScreen.nativeElement as HTMLElement;
       element.style.display = 'block'; // Set display to block to make it visible
