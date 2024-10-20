@@ -1,0 +1,20 @@
+.min {
+  font-size: 1000%;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: #6f42c1;
+  /* height: 10rem !important; */
+}
+
+.text {
+  font-size: 200%;
+}
+
+@media (max-width: 1024px) {
+  .min {
+    line-height: 12rem;
+  }
+  .text {
+    font-size: 170%;
+  }
+}

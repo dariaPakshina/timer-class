@@ -1,0 +1,79 @@
+.col-2 {
+  background-color: #6e42c118;
+}
+
+.description {
+  color: rgb(105, 128, 148);
+  font-size: 100%;
+}
+
+p {
+  margin-top: 1rem;
+  font-size: 140%;
+}
+
+.border {
+  border: 1px solid #b7a6d7 !important;
+}
+
+.round {
+  border-top-left-radius: 9px;
+}
+
+.round1 {
+  border-top-right-radius: 9px;
+}
+
+.round2 {
+  border-end-start-radius: 9px;
+}
+
+.round3 {
+  border-end-end-radius: 9px;
+}
+
+.with-icon {
+  position: relative;
+}
+
+app-edit-schedule {
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .description {
+    font-size: 90%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 440px) {
+  p {
+    font-size: 120%;
+  }
+}
+
+@media (max-width: 375px) {
+  .col-6 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .description2 {
+    display: none;
+  }
+
+  app-edit-schedule {
+    position: absolute;
+    right: -1rem;
+    top: -17.5rem;
+  }
+}

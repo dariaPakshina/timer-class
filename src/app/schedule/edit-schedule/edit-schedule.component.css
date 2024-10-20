@@ -1,0 +1,55 @@
+.icon,
+.icon:link,
+.icon:visited {
+  stroke: #6f42c1;
+  width: 2rem;
+  height: 2rem;
+
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.icon:hover,
+.icon:active {
+  stroke: #3c1f70;
+  cursor: pointer;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 0 0 10000px rgba(0, 0, 0, 0.5);
+  max-width: 30rem; /* Make the container smaller */
+  border: 1px solid #ddd; /* Add a border */
+}
+
+input[type="text"],
+input[type="number"] {
+  height: 38px; /* Ensure all inputs have the same height */
+  padding: 5px;
+  font-size: 14px;
+}
+
+.row {
+  padding: 5px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+.form-control {
+  border-radius: 10px; /* Rounded borders */
+  border: 1px solid #b7a6d7 !important;
+}
+
+button {
+  padding: 8px 20px;
+}

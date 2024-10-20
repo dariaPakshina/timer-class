@@ -1,0 +1,4 @@
+<p class="text-center" *ngIf="classNum !== 0 && !isBreakTime; else breakTime">
+  {{ classNum }}-й урок
+</p>
+<ng-template #breakTime> <p class="text-center">Перемена</p> </ng-template>

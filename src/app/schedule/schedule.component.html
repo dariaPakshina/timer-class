@@ -1,0 +1,128 @@
+<div class="container">
+  <div class="row">
+    <!-- Left Side -->
+    <div class="col-6">
+      <div class="row align-items-center justify-content-center text-center">
+        <div class="col-2"></div>
+        <div class="col-5 description">
+          <p class="description">Урок</p>
+        </div>
+        <div class="col-3 description">
+          <p class="description">Перемена</p>
+        </div>
+      </div>
+
+      <!-- Manually defined schedule rows -->
+      <div
+        class="row align-items-center justify-content-center text-center num"
+      >
+        <div class="col-2 border round" #scheduleNum>
+          <p class="text-center">1</p>
+        </div>
+        <div class="col-5 border">
+          <p>{{ formatTime(schedule[0]?.hour, schedule[0]?.minute) }}</p>
+        </div>
+        <div class="col-3 border round1">
+          <p>{{ schedule[0]?.breakDuration }}</p>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center text-center">
+        <div class="col-2 border" #scheduleNum>
+          <p>2</p>
+        </div>
+        <div class="col-5 border">
+          <p>{{ formatTime(schedule[1]?.hour, schedule[1]?.minute) }}</p>
+        </div>
+        <div class="col-3 border">
+          <p>{{ schedule[1]?.breakDuration }}</p>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center text-center">
+        <div class="col-2 border" #scheduleNum>
+          <p>3</p>
+        </div>
+        <div class="col-5 border">
+          <p>{{ formatTime(schedule[2]?.hour, schedule[2]?.minute) }}</p>
+        </div>
+        <div class="col-3 border">
+          <p>{{ schedule[2]?.breakDuration }}</p>
+        </div>
+      </div>
+      <div class="row align-items-center justify-content-center text-center">
+        <div class="col-2 border round2" #scheduleNum>
+          <p>4</p>
+        </div>
+        <div class="col-5 border">
+          <p>{{ formatTime(schedule[3]?.hour, schedule[3]?.minute) }}</p>
+        </div>
+        <div class="col-3 border round3">
+          <p>{{ schedule[3]?.breakDuration }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="col-6">
+      <div>
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-2"></div>
+          <div class="col-5 description description2">
+            <p class="description">Урок</p>
+          </div>
+          <div class="col-3 description description2">
+            <p class="description">Перемена</p>
+          </div>
+        </div>
+
+        <!-- Manually defined schedule rows -->
+        <div
+          class="row align-items-center justify-content-center text-center num"
+        >
+          <div class="col-2 border round" #scheduleNum>
+            <p>5</p>
+          </div>
+          <div class="col-5 border">
+            <p>{{ formatTime(schedule[4]?.hour, schedule[4]?.minute) }}</p>
+          </div>
+          <div class="col-3 border round1 with-icon">
+            <app-edit-schedule></app-edit-schedule>
+            <p>{{ schedule[4]?.breakDuration }}</p>
+          </div>
+        </div>
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-2 border" #scheduleNum>
+            <p>6</p>
+          </div>
+          <div class="col-5 border">
+            <p>{{ formatTime(schedule[5]?.hour, schedule[5]?.minute) }}</p>
+          </div>
+          <div class="col-3 border">
+            <p>{{ schedule[5]?.breakDuration }}</p>
+          </div>
+        </div>
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-2 border" #scheduleNum>
+            <p>7</p>
+          </div>
+          <div class="col-5 border">
+            <p>{{ formatTime(schedule[6]?.hour, schedule[6]?.minute) }}</p>
+          </div>
+          <div class="col-3 border">
+            <p>{{ schedule[6]?.breakDuration }}</p>
+          </div>
+        </div>
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-2 border round2" #scheduleNum>
+            <p>8</p>
+          </div>
+          <div class="col-5 border">
+            <p>{{ formatTime(schedule[7]?.hour, schedule[7]?.minute) }}</p>
+          </div>
+          <div class="col-3 border round3">
+            <p>-</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

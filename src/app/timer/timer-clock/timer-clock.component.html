@@ -1,0 +1,5 @@
+<p class="text-center min">{{ timerText }}</p>
+<p class="text-center text" *ngIf="timerText !== 'Звонок'; else bell">
+  минут(ы) до звонка
+</p>
+<ng-template #bell></ng-template>

@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-image: linear-gradient(to top, white, #e1cfff44, #6e42c12f);
+  margin: none;
+  height: 100vh;
+}
+
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1024 (Smaller desktops) */
+/**************************/
+
+@media (max-width: 1024px) {
+  body {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 440px) {
+  body {
+    margin-bottom: 2rem !important;
+  }
+}
