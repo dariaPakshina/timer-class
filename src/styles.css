@@ -3,6 +3,7 @@ body {
   background-image: linear-gradient(to top, white, #e1cfff44, #6e42c12f);
   margin: none;
   overflow-x: hidden;
+  overflow-y: auto; /* Allows vertical scrolling */
 }
 
 html,
