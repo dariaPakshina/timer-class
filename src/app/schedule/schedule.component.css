@@ -64,7 +64,7 @@ app-edit-schedule {
 @media (max-width: 375px) {
   .col-6 {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .description2 {
@@ -74,6 +74,6 @@ app-edit-schedule {
   app-edit-schedule {
     position: absolute;
     right: -1rem;
-    top: -17.5rem;
+    top: -16.5rem;
   }
 }

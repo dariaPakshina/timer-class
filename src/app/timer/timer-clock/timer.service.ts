@@ -64,6 +64,13 @@ export class TimerService {
     return this.timer$.asObservable();
   }
 
+  playAudio() {
+    let audio = new Audio();
+    audio.src = 'assets/school-bell.mp3'; // Correct path to the file in 'assets'
+    audio.load();
+    audio.play().catch((error) => console.error('Audio play error:', error));
+  }
+
   private startTimer() {
     // Update every minute
     interval(1000).subscribe(() => {
@@ -99,9 +106,10 @@ export class TimerService {
           this.classNum = nextClassOrBreak.index + 1;
         }
 
-        // If the timer hits zero, display "Bell Rings!"
+        // If the timer hits zero, display "Звонок"
         if (timeLeftForDisplay === 0) {
-          this.timer$.next('Bell Rings!');
+          this.timer$.next('Звонок');
+          this.playAudio();
         } else {
           this.timer$.next(`${timeLeftForDisplay}`);
         }
