@@ -78,6 +78,10 @@ export class TimerService {
       const firstClassTime = this.getClassTime(
         this.scheduleSubject.getValue()[0]
       );
+      if (now === firstClassTime) {
+        this.timer$.next('Звонок');
+        this.playAudio();
+      }
       const lastClassEndTime = this.addMinutes(
         this.getClassTime(
           this.scheduleSubject.getValue()[
