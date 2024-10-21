@@ -78,10 +78,7 @@ export class TimerService {
       const firstClassTime = this.getClassTime(
         this.scheduleSubject.getValue()[0]
       );
-      if (now === firstClassTime) {
-        this.timer$.next('Звонок');
-        this.playAudio();
-      }
+
       const lastClassEndTime = this.addMinutes(
         this.getClassTime(
           this.scheduleSubject.getValue()[
@@ -90,6 +87,14 @@ export class TimerService {
         ),
         this.classDuration
       );
+
+      // Проверяем, если текущее время в пределах 30 секунд от времени начала первого урока
+      const timeDifference = Math.abs(now.getTime() - firstClassTime.getTime());
+      if (timeDifference <= 3000) {
+        console.log('Звонок! Время урока.');
+        this.timer$.next('Звонок');
+        this.playAudio();
+      }
 
       // If current time is earlier than first class or later than last class
       if (now < firstClassTime || now > lastClassEndTime) {
